@@ -26,9 +26,9 @@ export function Post () {
         <p>Acabei de subir mais um projeto no meu GitHub. É um projeto que fiz nos estudos diarios. O nome do projeto é PrimeFlix 🚀</p>
         <p><a href="https://prime-five-sable.vercel.app/">PrimeFlix</a></p>
         <p> 
-          <a href="">#novoprojeto</a> {' '}
-          <a>#nlw </a> {' '}
-          <a>#rocketseat</a> {' '}
+          <a href="">#NovoProjeto</a> {' '}
+          <a>#Nlw </a> {' '}
+          <a>#Rocketseat</a> {' '}
         </p>
       </div>
 
