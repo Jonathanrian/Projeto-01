@@ -3,6 +3,8 @@ import { Post } from './components/Post';
 
 import styles from './App.module.css';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './global.css';
 import { Sidebar } from './components/Sidebar';
@@ -53,6 +55,7 @@ export function App() {
           {post.map(post => {
             return (
               <Post 
+                key={post.id}
                 author = {post.author}
                 content = {post.content}
                 publishedAt = {post.publishedAt}
@@ -60,6 +63,8 @@ export function App() {
             )
           })}
         </main>
+
+        <ToastContainer autoClose={3000} />
       </div>
     </div>
   )
