@@ -1,4 +1,4 @@
-import { format, formatDistanceToNow } from 'date-fns';
+import { compareAsc, format, formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale/pt-BR'
 
 import { Avatar } from './Avatar';
@@ -38,8 +38,12 @@ export function Post ({ author, publishedAt, content }) {
 
   }
 
-  function deleteComment(comment) {
-    console.log(`Deletar comentário ${comment}`);
+  function deleteComment(commentToDelete) {
+    const commentsWithoutDeletedOne = comments.filter(comments => {
+      return comments != commentToDelete;
+    })
+    setComments(commentsWithoutDeletedOne);
+    toast.success("Comentário deletado!")
   }
 
   return (
